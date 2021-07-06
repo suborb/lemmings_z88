@@ -1,0 +1,38 @@
+; Data definitions
+
+
+     defc appl_org=32768      ; application origin 20000
+     defc inbuffer=8192      ; input buffer       43808
+     defc inbuflen=2048      ; and length         6144
+     defc outbuffer=12288          ; output buffer 24576
+     defc outbuflen=8405          ; and length    16384
+     defc worksp=8192+2048        ; workspace          40960
+
+     defc stacksig=$f731
+
+
+     defvars   worksp
+     {
+; First value for debugging purposes only
+     dbg_buffer     ds.b 8
+     lastclv   ds.b 2
+     seqptr    ds.q 1
+     inhandle  ds.w 1
+     outhandle ds.w 1
+     oihandle  ds.w 1
+     lastseg   ds.w 1
+     onepercent     ds.b 3
+     header    ds.b 30
+     openfiles ds.b 1
+     options   ds.b 1
+     lastmsg   ds.w 1
+     redrawflag     ds.b 1
+     curpos    ds.b 2
+     workarea  ds.b 1770
+     listptr   ds.w 2
+     progpercent    ds.b 1
+     cursizeK  ds.b 3
+     bigfile   ds.b 1
+     flushsize ds.w 1
+     progmessage    ds.b 16
+     }
